@@ -1,6 +1,7 @@
 package retailStart;
 
 import department.Department;
+import department.Product;
 
 public class OfflineStore {
     private String name;
@@ -8,11 +9,11 @@ public class OfflineStore {
     private String workHours;
     private String adress;
     private String phone;
-    Department department = new Department(); // Композиция
+    private Department department; // Композиция
+    private Product product; // Композиция
 
 
-
-
+    public OfflineStore(){}
 
     public OfflineStore(String name,String workHours,int square,String adress,String phone){
         this.name = name;
@@ -20,6 +21,9 @@ public class OfflineStore {
         this.square = square;
         this.adress = adress;
         this.phone = phone;
+        department = new Department("Отдел Спортивных товаров",
+                "Товары для Спорта");
+        product = new Product();
 
 
         System.out.println("Магазин называется - " + name+ "\n"+"Режим работы - " + workHours+
@@ -28,7 +32,17 @@ public class OfflineStore {
                 + name + " - " + phone);
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - -  ");
     }
-    public OfflineStore(){}
+
+    public Department getDepartment(){
+        return department;
+    }
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+
+
+
 
 
 
@@ -39,6 +53,7 @@ public class OfflineStore {
         System.out.println("Магазин - "+name+" закрыт");
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
         department.giveDepartment(); // Метод из класса Department
+        department.departmentName();// Метод из класса Department
         department.putOnTheShelf(); // Метод из класса Department
         department.takeFromTheShelf(); // Метод из класса Department
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");

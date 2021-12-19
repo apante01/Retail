@@ -1,14 +1,12 @@
 package staff;
 
-public class Merchandiser {
+public class Merchandiser extends Staff {
 
-    private String name;
-    private String position;
-    private Staff Staff;
 
-    public Merchandiser(String name, String position) {
-        this.name = name;
-        this.position = position;
+
+    public Merchandiser(String name,String position,double expirience) {
+        super(name, position, expirience);}
+        public Merchandiser(){
     }
     public void layoutGood(){
         System.out.println("Выкладывает товар на полки");

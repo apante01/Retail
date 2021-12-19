@@ -1,10 +1,12 @@
 package service;
 
-public class Sale {
+public class Sale extends Service {
     private String puymentType;
     private double serviceTime;
 
-    public Sale(String puymentType,double serviceTime){
+    public Sale(String name,double price,String time,String quality,int grade,
+                String puymentType,double serviceTime){
+        super(name,price,time,quality,grade);
         this.puymentType = puymentType;
         this.serviceTime = serviceTime;
     }

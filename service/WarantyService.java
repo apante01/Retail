@@ -1,10 +1,12 @@
 package service;
 
-public class WarantyService {
+public class WarantyService extends Service {
     private String type;
     private String guaranteePeriod;
 
-    public WarantyService(String type,String guaranteePeriod){
+    public WarantyService(String name,double price,String time,String quality,int grade,
+                          String type,String guaranteePeriod){
+        super(name,price,time,quality,grade);
         this.type = type;
         this.guaranteePeriod = guaranteePeriod;
     }
@@ -29,4 +31,8 @@ public class WarantyService {
         System.out.println("Возврат денежных средств");
     }
 
+    @Override
+    public void feedbackSrvice() {
+        System.out.println("Обратная связь по Гарантийному сервису");
+    }
 }

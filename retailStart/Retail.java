@@ -1,6 +1,8 @@
 package retailStart;
 
 import department.Ball;
+import department.Department;
+import department.Product;
 import staff.Cashier;
 import staff.Merchandiser;
 import staff.Staff;
@@ -13,17 +15,33 @@ public class Retail {
     vesna.openStore();
     vesna.closeStore();
 
-    Ball footballBall = new Ball("Мяч",999.99,696969,2,"Фабрика Спорт Товаров, Россия",
-            "Кожа","Для игры на траве","Бело-Черный",
-            "Для Футбола",5,0.56,"DIADORA","Круглый");
-    footballBall.putOnTheShelf();
-    footballBall.choiceProduct();
-    footballBall.takeFromTheShelf();
-    footballBall.testProduct("Тестируем мяч в тестовой зоне");
-    footballBall.putOnBasket();
-    footballBall.takeFromBasket();
-    footballBall.buy();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //footballBall.putOnTheShelf();
+    //footballBall.choiceProduct();
+    //footballBall.takeFromTheShelf();
+    //footballBall.testProduct("Тестируем мяч в тестовой зоне");
+    //footballBall.putOnBasket();
+    //footballBall.takeFromBasket();
+    //footballBall.buy();
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
+
+
+
+
 
 
 
