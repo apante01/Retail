@@ -3,8 +3,8 @@ package department;
 public class HomeTechnics extends Department{
     public HomeTechnics(){}
 
-    public  HomeTechnics(String departmentName,String typeProduct){
-        super(departmentName,typeProduct);
+    public  HomeTechnics(String departmentName,String typeProduct,Product product){
+        super(departmentName,typeProduct,product);
         HomeTechnics homeTechnics = new HomeTechnics();
         homeTechnics.setDepartmentName("Бытовая Техника");
         homeTechnics.setTypeProduct("Товары для дома");

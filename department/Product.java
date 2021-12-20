@@ -5,7 +5,7 @@ public class Product {
     private double price;
     private int item;
     private String matter;
-    private String purposeOgGood;
+    private String purposeOfGood;
     private String color;
     private int guaranteePeriod;
     private String manufacturer;
@@ -20,9 +20,13 @@ public class Product {
     private String shape;
     private Department department; // Агрегация
 
+
+
+
+
     public Product(){}
 
-    public Product(String name, double price, int item, String matter, String purposeOgGood,
+    public Product(String name, double price, int item, String matter, String purposeOfGood,
                    String color, int guaranteePeriod, String manufacturer, int rating,
                    String technicalSpecifications, String expirationDate, double size,
                    double volume, String typePack, String brand, double weight, String shape) {
@@ -30,7 +34,7 @@ public class Product {
         this.price = price;
         this.item = item;
         this.matter = matter;
-        this.purposeOgGood = purposeOgGood;
+        this.purposeOfGood = purposeOfGood;
         this.color = color;
         this.guaranteePeriod = guaranteePeriod;
         this.manufacturer = manufacturer;
@@ -44,6 +48,20 @@ public class Product {
         this.weight = weight;
         this.shape = shape;
         this.department = department;
+
+        System.out.println("Наименование - " + name);
+        System.out.println("Цена - " + price + " рублей");
+        System.out.println("Артикул - " + item);
+        System.out.println("Материал - " + matter);
+        System.out.println("Применение - " + purposeOfGood);
+        System.out.println("Цвет - " + color);
+        System.out.println("Гарантия - " + guaranteePeriod + " года");
+        System.out.println("Производитель - " + manufacturer);
+        System.out.println("Размер - " + size);
+        System.out.println("Вес - " + weight+" кг");
+        System.out.println("Фирма - " + brand);
+        System.out.println("Форма - " + shape);
+        System.out.println(" ");
     }
     public String ToString(){
         return name;
@@ -87,11 +105,11 @@ public class Product {
     }
 
     public String getPurposeOgGood() {
-        return purposeOgGood;
+        return purposeOfGood;
     }
 
     public void setPurposeOgGood(String purposeOgGood) {
-        this.purposeOgGood = purposeOgGood;
+        this.purposeOfGood = purposeOgGood;
     }
 
     public String getColor() {
@@ -209,6 +227,7 @@ public class Product {
     public void takeFromTheShelf(){
         System.out.println("Берем товар с полки");
     }
+    public void testProduct(){System.out.println("Тестируем товар в тестовой зоне");}
     public void putOnBasket(){
         System.out.println("Кладем товар в корзину");
     }
@@ -217,6 +236,9 @@ public class Product {
     }
     public void buy(){
         System.out.println("Оплачиваем товар");
+    }
+    public void giveProduct(){System.out.println("Завезли товары в магазин");
+
     }
 
 

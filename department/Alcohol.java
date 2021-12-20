@@ -4,8 +4,8 @@ public class Alcohol extends Department{
 
 
     public Alcohol(){}
-    public Alcohol(String departmentName,String typeProduct){
-        super(departmentName,typeProduct);
+    public Alcohol(String departmentName,String typeProduct,Product product){
+        super(departmentName,typeProduct,product);
         Alcohol alcohol = new Alcohol();
         alcohol.setDepartmentName("Алкоголь");
         alcohol.setTypeProduct("Спиртосодержащие напитки");

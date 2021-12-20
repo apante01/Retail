@@ -15,15 +15,17 @@ public class OfflineStore {
 
     public OfflineStore(){}
 
-    public OfflineStore(String name,String workHours,int square,String adress,String phone){
+    public OfflineStore(String name,String workHours,int square,String adress,String phone,
+                        Product product,Department department){
         this.name = name;
         this.workHours = workHours;
         this.square = square;
         this.adress = adress;
         this.phone = phone;
-        department = new Department("Отдел Спортивных товаров",
-                "Товары для Спорта");
-        product = new Product();
+        this.department = new Department("Отдел Спортивных товаров",
+                "Товары для Спорта",null);
+        this.product = new Product();
+
 
 
         System.out.println("Магазин называется - " + name+ "\n"+"Режим работы - " + workHours+
@@ -37,14 +39,17 @@ public class OfflineStore {
         return department;
     }
     public void setDepartment(Department department) {
+
         this.department = department;
     }
 
+    public Product getProduct() {
+        return product;
+    }
 
-
-
-
-
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public void openStore(){
         System.out.println("Магазин - "+name+ " работает с - "+workHours);

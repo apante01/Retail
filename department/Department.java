@@ -7,7 +7,7 @@ public class Department {
 
     public Department(){}
 
-    public Department(String departmentName,String typeProduct){
+    public Department(String departmentName,String typeProduct,Product product){
         this.departmentName = departmentName;
         this. typeProduct = typeProduct;
         this.product = product;
