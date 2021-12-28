@@ -63,9 +63,9 @@ public class Product {
         System.out.println("Форма - " + shape);
         System.out.println(" ");
     }
-    public String ToString(){
-        return name;
-    }
+    /*public String ToString(){return name;}
+
+     */
 
 
 

@@ -54,6 +54,7 @@ public class OfflineStore {
     public void openStore(){
         System.out.println("Магазин - "+name+ " работает с - "+workHours);
     }
+
     public void closeStore(){
         System.out.println("Магазин - "+name+" закрыт");
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
@@ -61,9 +62,28 @@ public class OfflineStore {
         department.departmentName();// Метод из класса Department
         department.putOnTheShelf(); // Метод из класса Department
         department.takeFromTheShelf(); // Метод из класса Department
+
+
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
 
     }
+    public void workTime() {
+        short hour = 8;
+        boolean workTime = hour > 10 && hour < 22;
+        if (workTime) {
+            System.out.println("Магазин открыт - Добро Пожаловать!");
+        } else if(hour ==10){
+            System.out.println("Всем занять рабочие места");
+        }else if(hour ==22){
+            System.out.println("Всем покинуть рабочие места");}
+        else{
+            System.out.println("Магазин закрыт,будем рады вас видеть ежедневно" +
+                    " с 10:00 до 22:00");
+        }
+    }
+
+
+
 
 
 
