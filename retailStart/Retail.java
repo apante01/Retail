@@ -1,9 +1,6 @@
 package retailStart;
 
 import department.*;
-import staff.Cashier;
-import staff.Merchandiser;
-import staff.Staff;
 
 public class Retail {
 
