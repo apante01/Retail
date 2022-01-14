@@ -1,91 +1,78 @@
 package retailStart;
 
 import department.Department;
-import department.Product;
+import Product.Product;
+import department.Warehouse;
+
+import java.util.Random;
 
 public class OfflineStore {
-    private String name;
+    private String nameStore;
     private int square;
     private String workHours;
     private String adress;
     private String phone;
     private Department department; // Композиция
-    private Product product; // Композиция
+    private Warehouse warehouse;
+
+    public OfflineStore(String nameStore, int square, String workHours, String adress,
+                        String phone) {
+        Department sport = new Department("Спортивные товары");
+        Department ht = new Department("Бытовая техника");
+        Department alcohol = new Department("Алкоголь");
+        Department sklad = new Department("Склад");
 
 
-    public OfflineStore(){}
+        System.out.println("Магазин - " + nameStore + "\n" + "Режим работы - " + workHours +
+                "\n" + "Площадь магазина - " + nameStore + " - " + square + " квадратных метров" +
+                "\n" + "Адрес магазина - " + nameStore + " - " + adress + "\n" + "Телефон магазина - "
+                + nameStore + " - " + phone + "\n" + "В магазине " + nameStore + " есть отделы:");
 
-    public OfflineStore(String name,String workHours,int square,String adress,String phone,
-                        Product product,Department department){
-        this.name = name;
-        this.workHours = workHours;
-        this.square = square;
-        this.adress = adress;
-        this.phone = phone;
-        this.department = new Department("Отдел Спортивных товаров",
-                "Товары для Спорта",null);
-        this.product = new Product();
+        Department[] array = {sport, ht, alcohol, sklad};
+        for (Department otdel : array) {
+            System.out.println(otdel.getDepName());
+        }
 
-
-
-        System.out.println("Магазин называется - " + name+ "\n"+"Режим работы - " + workHours+
-                "\n"+"Площадь магазина - " + name + " - " + square + " квадратных метров"+ "\n"+
-                "Адрес магазина - " + name + " - " + adress+"\n"+"Телефон магазина - "
-                + name + " - " + phone);
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - -  ");
     }
 
-    public Department getDepartment(){
+    public Department getDepartment() {
         return department;
     }
-    public void setDepartment(Department department) {
 
+    public void setDepartment(Department department) {
         this.department = department;
     }
 
-    public Product getProduct() {
-        return product;
+    public void openStore() {
+        System.out.println("Магазин VESNA открыт с 10:00");
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void closeStore() {
+        System.out.println("Магазин VESNA закрывается в 22:00");
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
     }
 
-    public void openStore(){
-        System.out.println("Магазин - "+name+ " работает с - "+workHours);
-    }
-
-    public void closeStore(){
-        System.out.println("Магазин - "+name+" закрыт");
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-        department.giveDepartment(); // Метод из класса Department
-        department.departmentName();// Метод из класса Department
-        department.putOnTheShelf(); // Метод из класса Department
-        department.takeFromTheShelf(); // Метод из класса Department
-
-
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-
-    }
     public void workTime() {
-        short hour = 8;
-        boolean workTime = hour > 10 && hour < 22;
-        if (workTime) {
-            System.out.println("Магазин открыт - Добро Пожаловать!");
-        } else if(hour ==10){
-            System.out.println("Всем занять рабочие места");
-        }else if(hour ==22){
-            System.out.println("Всем покинуть рабочие места");}
-        else{
-            System.out.println("Магазин закрыт,будем рады вас видеть ежедневно" +
-                    " с 10:00 до 22:00");
+        Random time = new Random();
+        int t = 1;
+        while (t != 0) break;
+        {
+            t = time.nextInt(22);
+            boolean worktime = t > 10 && t < 22;
+            if (worktime) {
+                System.out.println("Магазин открыт - Добро Пожаловать!");
+            } else if (t == 10) {
+                System.out.println("Всем занять рабочие места");
+            } else if (t == 22) {
+                System.out.println("Всем покинуть рабочие места");
+            } else {
+                System.out.println("Магазин закрыт,будем рады вас видеть ежедневно" +
+                        " с 10:00 до 22:00");
+            }
+
+
+            System.out.println("-----------------------------------------------------------------");
+
         }
     }
-
-
-
-
-
-
-
 }

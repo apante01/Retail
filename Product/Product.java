@@ -1,4 +1,6 @@
-package department;
+package Product;
+
+import department.Department;
 
 public class Product {
     private String name;
@@ -18,11 +20,7 @@ public class Product {
     private String brand;
     private double weight;
     private String shape;
-    private Department department; // Агрегация
-
-
-
-
+    private Department department;
 
     public Product(){}
 
@@ -47,29 +45,7 @@ public class Product {
         this.brand = brand;
         this.weight = weight;
         this.shape = shape;
-        this.department = department;
-
-        System.out.println("Наименование - " + name);
-        System.out.println("Цена - " + price + " рублей");
-        System.out.println("Артикул - " + item);
-        System.out.println("Материал - " + matter);
-        System.out.println("Применение - " + purposeOfGood);
-        System.out.println("Цвет - " + color);
-        System.out.println("Гарантия - " + guaranteePeriod + " года");
-        System.out.println("Производитель - " + manufacturer);
-        System.out.println("Размер - " + size);
-        System.out.println("Вес - " + weight+" кг");
-        System.out.println("Фирма - " + brand);
-        System.out.println("Форма - " + shape);
-        System.out.println(" ");
     }
-    /*public String ToString(){return name;}
-
-     */
-
-
-
-
 
 
     public String getName() {
@@ -104,12 +80,12 @@ public class Product {
         this.matter = matter;
     }
 
-    public String getPurposeOgGood() {
+    public String getPurposeOfGood() {
         return purposeOfGood;
     }
 
-    public void setPurposeOgGood(String purposeOgGood) {
-        this.purposeOfGood = purposeOgGood;
+    public void setPurposeOfGood(String purposeOfGood) {
+        this.purposeOfGood = purposeOfGood;
     }
 
     public String getColor() {
@@ -216,29 +192,9 @@ public class Product {
         this.department = department;
     }
 
-
-
-    public void putOnTheShelf(){
-        System.out.println("Товар выложен на полки");
-    }
-    public void choiceProduct(){
-        System.out.println("Выбираем товар");
-    }
-    public void takeFromTheShelf(){
-        System.out.println("Берем товар с полки");
-    }
-    public void testProduct(){System.out.println("Тестируем товар в тестовой зоне");}
-    public void putOnBasket(){
-        System.out.println("Кладем товар в корзину");
-    }
-    public void takeFromBasket(){
-        System.out.println("Выкладываем товар из корзины");
-    }
-    public void buy(){
-        System.out.println("Оплачиваем товар");
-    }
-    public void giveProduct(){System.out.println("Завезли товары в магазин");
-
+    public void testGood(){
+        System.out.println("Перед покупкой товар можно протестировать в присутствии консультанта");
+        System.out.println("---------------------------------------------------------------------------");
     }
 
 

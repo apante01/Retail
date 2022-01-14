@@ -1,64 +1,39 @@
 package department;
 
+import Product.Product;
+
 public class Department {
-    private String departmentName;
-    private String typeProduct;
-    private Product product; // агрегация
+    private String depName;
+    private Product product;
+
+
 
     public Department(){}
 
-    public Department(String departmentName,String typeProduct,Product product){
-        this.departmentName = departmentName;
-        this. typeProduct = typeProduct;
-        this.product = product;
+    public Department(String depName) {
+        this.depName = depName;
+        product = new Product();
+
+
     }
 
-    public String getDepartmentName(){
-
-        return departmentName;
-    }
-    public void setDepartmentName(String departmentName){
-
-        this.departmentName = departmentName;
+    public String getDepName() {
+        return depName;
     }
 
-    public String getTypeProduct(){
-
-        return typeProduct;
-    }
-    public void setTypeProduct(String typeProduct){
-
-        this.typeProduct = typeProduct;
+    public void setDepName(String depName) {
+        this.depName = depName;
     }
 
-
-    public Product getProduct(){
-
+    public Product getProduct() {
         return product;
     }
-    public void setProduct(Product product){
 
+    public void setProduct(Product product) {
         this.product = product;
     }
 
-
-
-    public void giveDepartment(){
-
-        System.out.println("В магазине есть  отделы");
+    public void putGoodsInDepartment(){
+        System.out.println("Выложить товары в отделы");
     }
-    public void departmentName(){
-
-        System.out.println(departmentName);// Имя отдела создано в классе OfflineStore
-    }
-
-    public void putOnTheShelf(){
-
-        System.out.println("Товары выложены в отделы");
-    }
-    public void takeFromTheShelf(){
-
-        System.out.println("Товар забирают из отделов");
-    }
-
 }
