@@ -10,6 +10,7 @@ public class Ball extends SportGood{
                 "Для игры в зале", "Желто-черный", 1,
                 "Фабрика Футбольных мячей", 0, null, null,
                 4d, 0d, null, "Звезда", 0.56, "Круглый");
+        
         System.out.println("Наименование - " + footballBall.getName() + "\n" + "Цена - " + footballBall.getPrice() + " р."
                 + "\n" + "Артикул - " + footballBall.getItem() + "\n" + "Материал - " + footballBall.getMatter()
                 + "\n" + "Применение - " + footballBall.getPurposeOfGood() + "\n" + "Цвет - " + footballBall.getColor()
@@ -17,12 +18,17 @@ public class Ball extends SportGood{
                 + footballBall.getManufacturer() + "\n" + "Размер - " + footballBall.getSize() + "\n" + "Вес - "
                 + footballBall.getWeight() + " кг" + "\n" + "Фирма - " + footballBall.getBrand() + "\n" +
                 "Форма - " + footballBall.getShape());
+
+
+    }
+
     }
 
 
 
 
-        }
+
+
 
 
 

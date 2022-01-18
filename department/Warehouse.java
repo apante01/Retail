@@ -64,11 +64,15 @@ public class Warehouse {
         this.square = square;
     }
 
-    public void salesBallWeek() {
+
+
+
+    public void salesBallWeek(String name) {
+        System.out.println(name);
         salesWeek = 21;
-
-
-        while (salesWeek > 15) {
+        do {salesWeek --;
+            System.out.println(salesWeek);}
+        while (salesWeek > 15); {
             salesWeek = salesWeek - 1;
             System.out.println(salesWeek + " - Снижение продаж");
             if (salesWeek <= 15) {

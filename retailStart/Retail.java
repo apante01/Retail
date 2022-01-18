@@ -16,10 +16,19 @@ public class Retail {
         Ball ball = new Ball("Раздел Спортиынх товаров МЯЧИ");
         ball.getProduct().testGood();
 
+        Beer beer = new Beer("Раздел Пиво");
+        beer.getProduct().getBrand();
+
+
+
         Warehouse warehouse = new Warehouse("Склад", 150.5);
         warehouse.movementOfBall();
         warehouse.orderABall();
-        warehouse.salesBallWeek();
+        warehouse.salesBallWeek("Средние продажи за неделю");
+
+
+
+
 
 
 
