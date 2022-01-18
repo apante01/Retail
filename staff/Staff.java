@@ -11,7 +11,31 @@ public class Staff {
       this.position = position;
       this.expirience = expirience;
   }
-  public Staff(){}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public double getExpirience() {
+        return expirience;
+    }
+
+    public void setExpirience(double expirience) {
+        this.expirience = expirience;
+    }
+
+    public Staff(){}
 
     public void sayHello(){
         System.out.println("Здравствуйте");
