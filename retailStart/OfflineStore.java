@@ -1,7 +1,6 @@
 package retailStart;
 
 import department.Department;
-import Product.Product;
 import department.Warehouse;
 
 import java.util.Random;
@@ -17,10 +16,11 @@ public class OfflineStore {
 
     public OfflineStore(String nameStore, int square, String workHours, String adress,
                         String phone) {
-        Department sport = new Department("Спортивные товары");
-        Department ht = new Department("Бытовая техника");
-        Department alcohol = new Department("Алкоголь");
-        Department sklad = new Department("Склад");
+        Department sport = CreateToObject.createDepartment("Спортивные товары");
+        Department shoes = CreateToObject.createDepartment("Обувь");
+        Department ht = CreateToObject.createDepartment("Бытовая техника");
+        Department alcohol = CreateToObject.createDepartment("Алкоголь");
+        Department sklad = CreateToObject.createDepartment("Склад");
 
 
         System.out.println("Магазин - " + nameStore + "\n" + "Режим работы - " + workHours +
@@ -28,12 +28,13 @@ public class OfflineStore {
                 "\n" + "Адрес магазина - " + nameStore + " - " + adress + "\n" + "Телефон магазина - "
                 + nameStore + " - " + phone + "\n" + "В магазине " + nameStore + " есть отделы:");
 
-        Department[] array = {sport, ht, alcohol, sklad};
+        Department[] array = {sport,shoes, ht, alcohol, sklad};
         for (Department otdel : array) {
             System.out.println(otdel.getDepName());
         }
 
     }
+
 
     public Department getDepartment() {
         return department;

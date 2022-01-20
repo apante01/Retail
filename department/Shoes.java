@@ -1,8 +1,9 @@
 package department;
 
-import Product.Product;
+import product.Product;
+import staff.ShopAssistant;
 
-public class Shoes {
+public class Shoes extends Department {
 
 
     private String name;
@@ -15,8 +16,27 @@ public class Shoes {
         this.product = product;
     }
 
-   public void getCheck(){
-       System.out.println("Название продукта "+product.getName()+
-               " "+product.getPrice());
-   }
+
+    public void getCheck() {
+        System.out.println("Название продукта " + product.getName() +
+                " " + product.getPrice());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
 }

@@ -1,4 +1,4 @@
-package Product;
+package product;
 
 import department.Department;
 

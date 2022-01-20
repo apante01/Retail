@@ -1,13 +1,15 @@
 package department;
 
-import Product.Product;
+import staff.ShopAssistant;
 
-public class HomeTechnics extends Department{
+public class HomeTechnics extends Department {
     public HomeTechnics() {
     }
-    public HomeTechnics(String depName){
+
+    public HomeTechnics(String depName) {
         super(depName);
     }
+
 
     @Override
     public void putGoodsInDepartment() {

@@ -6,10 +6,6 @@ public class ShopAssistant extends Staff{
         super(name,position,expirience);
     }
 
-    @Override
-    public void sayHello() {
-        System.out.println("Добрый день");
-    }
 
     @Override
     public void helpsWithTheChoice() {
@@ -21,4 +17,6 @@ public class ShopAssistant extends Staff{
         System.out.println("Товар ХХХ лидер продаж");
     }
 
+
 }
+

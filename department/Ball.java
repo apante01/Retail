@@ -1,6 +1,6 @@
 package department;
 
-import Product.Product;
+import product.Product;
 
 public class Ball extends SportGood{
     public Ball(String depName) {

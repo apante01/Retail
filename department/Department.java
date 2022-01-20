@@ -1,14 +1,15 @@
 package department;
 
-import Product.Product;
+import product.Product;
+import staff.ShopAssistant;
 
 public class Department {
     private String depName;
     private Product product;
 
 
-
-    public Department(){}
+    public Department() {
+    }
 
     public Department(String depName) {
         this.depName = depName;
@@ -16,6 +17,7 @@ public class Department {
 
 
     }
+
 
     public String getDepName() {
         return depName;
@@ -33,7 +35,7 @@ public class Department {
         this.product = product;
     }
 
-    public void putGoodsInDepartment(){
+    public void putGoodsInDepartment() {
         System.out.println("Выложить товары в отделы");
     }
 }

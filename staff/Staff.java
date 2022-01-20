@@ -1,6 +1,6 @@
 package staff;
 
-public class Staff {
+public abstract class Staff {
 
   private String name;
   private String position;
@@ -14,7 +14,10 @@ public class Staff {
   public Staff(){}
 
     public void sayHello(){
-        System.out.println("Здравствуйте");
+
+        System.out.println("Добрый день, " + "я " + getPosition() + ", меня зовут " + getName() + "\n" +
+                "--------------------------------------------------");
+
     }
     public void advise(){
         System.out.println("Советы при выборе товара");
@@ -23,10 +26,35 @@ public class Staff {
         System.out.println("Помощь в выборе товара");
     }
     public void sayGoodbye(){
-        System.out.println("До свидания");
+
+        System.out.println("Досвидания, ждём Вас снова в нашем магазине");
+
     }
 
-     }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public double getExpirience() {
+        return expirience;
+    }
+
+    public void setExpirience(double expirience) {
+        this.expirience = expirience;
+    }
+}
 
 
 

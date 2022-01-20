@@ -1,6 +1,6 @@
 package department;
 
-import Product.Product;
+import staff.ShopAssistant;
 
 public class Alcohol extends Department{
 
@@ -9,6 +9,7 @@ public class Alcohol extends Department{
     public Alcohol(String depName){
         super(depName);
     }
+
 
     @Override
     public void putGoodsInDepartment() {

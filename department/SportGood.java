@@ -1,7 +1,5 @@
 package department;
 
-import Product.Product;
-
 public class SportGood extends Department {
     public SportGood(){}
 
@@ -10,9 +8,6 @@ public class SportGood extends Department {
 
 
     }
-
-
-
 
     @Override
     public void putGoodsInDepartment() {
