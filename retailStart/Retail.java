@@ -1,7 +1,10 @@
 package retailStart;
 
 import Product.Product;
+import container.Basket;
 import department.*;
+
+import java.util.*;
 
 public class Retail {
 
@@ -25,6 +28,25 @@ public class Retail {
         warehouse.movementOfBall();
         warehouse.orderABall();
         warehouse.salesBallWeek("Средние продажи за неделю");
+
+        Queue<Product>basket = new PriorityQueue<>();
+        basket.add(new Product("Мяч"));
+        basket.add(new Product("Пиво"));
+        basket.add(new Product("Кроссовки"));
+        basket.add(new Product("Чайник"));
+       while(basket.size()>0){
+           System.out.println(basket.poll());}
+        System.out.println(basket.size());
+
+
+
+
+
+
+        
+
+
+
 
 
 
