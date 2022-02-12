@@ -2,7 +2,7 @@ package Product;
 
 import department.Department;
 
-public class Product {
+public class Product implements Comparable{
     private String name;
     private double price;
     private int item;
@@ -23,6 +23,10 @@ public class Product {
     private Department department;
 
     public Product(){}
+
+    public Product(String name) {
+        this.name = name;
+    }
 
     public Product(String name, double price, int item, String matter, String purposeOfGood,
                    String color, int guaranteePeriod, String manufacturer, int rating,
@@ -52,8 +56,10 @@ public class Product {
         return name;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return getName();
+
     }
 
     public double getPrice() {
@@ -197,6 +203,13 @@ public class Product {
         System.out.println("---------------------------------------------------------------------------");
     }
 
+    @Override
+    public String toString() {
+        return  name;
+    }
 
-
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
